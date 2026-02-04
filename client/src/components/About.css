@@ -1,0 +1,160 @@
+.about-page-new {
+  width: 100%;
+  background: #1a2332;
+  min-height: 100vh;
+  padding: 100px 0;
+}
+
+/* Main About Section */
+.about-main-section {
+  width: 100%;
+}
+
+.container-about {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Page Title */
+.about-page-title {
+  font-size: 72px;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  margin-bottom: 80px;
+  letter-spacing: 3px;
+}
+
+.highlight-orange {
+  color: #FFA500;
+}
+
+/* Content Grid */
+.about-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Image Container */
+.about-image-container {
+  width: 100%;
+}
+
+.about-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Text Content */
+.about-text-content {
+  color: white;
+}
+
+.about-paragraph {
+  font-size: 18px;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.about-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.about-paragraph .highlight-orange {
+  font-weight: 600;
+  color: #FFA500;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .about-page-title {
+    font-size: 64px;
+    margin-bottom: 60px;
+  }
+
+  .about-content-grid {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-page-new {
+    padding: 80px 0;
+  }
+
+  .container-about {
+    padding: 0 30px;
+  }
+
+  .about-page-title {
+    font-size: 56px;
+    margin-bottom: 50px;
+  }
+
+  .about-content-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .about-paragraph {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page-new {
+    padding: 60px 0;
+  }
+
+  .container-about {
+    padding: 0 25px;
+  }
+
+  .about-page-title {
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+
+  .about-content-grid {
+    gap: 40px;
+  }
+
+  .about-paragraph {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-page-new {
+    padding: 50px 0;
+  }
+
+  .container-about {
+    padding: 0 20px;
+  }
+
+  .about-page-title {
+    font-size: 36px;
+    margin-bottom: 35px;
+    letter-spacing: 2px;
+  }
+
+  .about-content-grid {
+    gap: 30px;
+  }
+
+  .about-paragraph {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+}

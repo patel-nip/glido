@@ -1,0 +1,130 @@
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 320px;
+  max-width: 85vw;
+  background: #000000;
+  padding: 50px 40px;
+  animation: slideInLeft 0.3s ease;
+  overflow-y: auto;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 36px;
+  cursor: pointer;
+  padding: 5px;
+  line-height: 1;
+  transition: all 0.3s;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-button:hover {
+  color: #FFA500;
+  transform: rotate(90deg);
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin-top: 80px;
+}
+
+.mobile-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+  padding: 5px 0;
+  position: relative;
+}
+
+.mobile-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #FFA500;
+  transition: width 0.3s ease;
+}
+
+.mobile-nav a:hover {
+  color: #FFA500;
+  padding-left: 10px;
+}
+
+.mobile-nav a:hover::after {
+  width: 60px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .mobile-menu {
+    padding: 40px 30px;
+  }
+
+  .mobile-nav {
+    gap: 30px;
+    margin-top: 60px;
+  }
+
+  .mobile-nav a {
+    font-size: 20px;
+  }
+}
+
+@media (max-height: 600px) {
+  .mobile-nav {
+    gap: 25px;
+    margin-top: 50px;
+  }
+
+  .mobile-nav a {
+    font-size: 18px;
+  }
+}

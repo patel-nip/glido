@@ -1,0 +1,261 @@
+.location-picker-container {
+  margin-bottom: 20px;
+}
+
+.location-picker-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.location-input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.location-display {
+  flex: 1;
+  padding: 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 15px;
+  background: #f9f9f9;
+  cursor: pointer;
+}
+
+.open-map-btn {
+  padding: 14px 20px;
+  background: #FFA500;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.open-map-btn:hover {
+  background: #FF8C00;
+}
+
+.map-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.map-modal-content {
+  background: white;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.map-modal-header h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #1a1a1a;
+}
+
+.close-map-btn {
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-map-btn:hover {
+  color: #000;
+}
+
+.map-search {
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  gap: 10px;
+}
+
+.map-search-input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.map-search-input:focus {
+  outline: none;
+  border-color: #FFA500;
+}
+
+.map-search-btn {
+  padding: 12px 24px;
+  background: #FFA500;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.map-search-btn:hover {
+  background: #FF8C00;
+}
+
+.map-instructions {
+  padding: 12px 20px;
+  background: #fff3e0;
+  color: #e65100;
+  font-size: 14px;
+  text-align: center;
+  border-bottom: 1px solid #ffe0b2;
+}
+
+.map-modal-footer {
+  padding: 20px;
+  border-top: 1px solid #e0e0e0;
+  background: #f9f9f9;
+}
+
+.selected-address {
+  margin: 0 0 15px 0;
+  padding: 12px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #666;
+  min-height: 45px;
+}
+
+.confirm-location-btn {
+  width: 100%;
+  padding: 14px;
+  background: #FFA500;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.confirm-location-btn:hover {
+  background: #FF8C00;
+}
+
+@media (max-width: 768px) {
+  .map-modal {
+    padding: 0;
+  }
+
+  .map-modal-content {
+    max-width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+  
+  .location-input-group {
+    flex-direction: column;
+  }
+}
+
+/* Search Suggestions Dropdown */
+.search-input-wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  gap: 10px;
+}
+
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 80px; /* Leave space for search button */
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.suggestion-item {
+  padding: 12px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.2s;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover {
+  background: #f8f9fa;
+}
+
+.suggestion-item.no-results {
+  cursor: default;
+  color: #999;
+  justify-content: center;
+}
+
+.suggestion-item.no-results:hover {
+  background: white;
+}
+
+.suggestion-icon {
+  font-size: 16px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.suggestion-text {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.map-search-input:focus {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
