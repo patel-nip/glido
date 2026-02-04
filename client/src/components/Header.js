@@ -58,15 +58,11 @@ const Header = () => {
                     </button>
 
                     <Link to="/" className="logo">
-                        <div className="logo-content">
-                            <span className="logo-text">GLIDO</span>
-                            <div className="logo-icon">
-                                <span className="bar"></span>
-                                <span className="bar"></span>
-                                <span className="bar"></span>
-                            </div>
-                        </div>
-                        <div className="tagline">Your ride, your rhythm.</div>
+                        <img
+                            src="/images/logo.png"
+                            alt="GLIDO - Your ride, your rhythm"
+                            className="logo-image"
+                        />
                     </Link>
 
                     <div className="header-actions">
