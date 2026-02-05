@@ -37,7 +37,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
 
                 <nav className="mobile-nav">
                     <Link to="/" onClick={onClose}>HOME</Link>
-                    <Link to="/booking/initiate" onClick={onClose}>TRACK BOOKING</Link>
+                    <Link to="/track-booking" onClick={onClose}>TRACK BOOKING</Link>
                     <Link to="/services" onClick={onClose}>FLEET</Link>
                     <Link to="/login" onClick={onClose}>SIGN IN</Link>
                     <Link to="/register" onClick={onClose}>SIGN UP</Link>

@@ -15,6 +15,7 @@ import Terms from './components/Terms';
 import Privacy from './components/Privacy';
 import RefundPolicy from './components/RefundPolicy';
 import Payment from './components/Payment';
+import TrackBooking from './components/TrackBooking';
 import './App.css';
 
 // Scroll to top component
@@ -111,6 +112,7 @@ function App() {
             <Route path="/refund-policy" element={<RefundPolicy />} />
             <Route path="/cancellation-policy" element={<RefundPolicy />} />
             <Route path="/payment" element={<Payment />} />
+            <Route path="/track-booking" element={<TrackBooking />} />
             <Route path="/booking-success" element={<div style={{ padding: '100px 20px', textAlign: 'center' }}><h1>Booking Successful!</h1><p>Thank you for your booking. You will receive a confirmation email shortly.</p></div>} />
             <Route path="*" element={
               <div className="error-boundary">

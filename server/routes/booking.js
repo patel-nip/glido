@@ -301,3 +301,34 @@ router.get('/testimonials/all', async (req, res) => {
 });
 
 module.exports = router;
+
+// Track booking by ID and passenger name
+router.get('/track', async (req, res) => {
+    try {
+        const { bookingId, passengerName } = req.query;
+
+        if (!bookingId || !passengerName) {
+            return res.status(400).json({ message: 'Booking ID and passenger name are required' });
+        }
+
+        const [bookings] = await db.query(
+            'SELECT * FROM bookings WHERE id = ? AND LOWER(passengerName) = LOWER(?)',
+            [bookingId, passengerName]
+        );
+
+        if (bookings.length === 0) {
+            return res.status(404).json({ message: 'Booking not found. Please check your details.' });
+        }
+
+        // Parse JSON fields if stored as strings
+        const booking = bookings[0];
+        if (typeof booking.selectedVehicle === 'string') {
+            booking.selectedVehicle = JSON.parse(booking.selectedVehicle);
+        }
+
+        res.json(booking);
+    } catch (error) {
+        console.error('Error tracking booking:', error);
+        res.status(500).json({ message: 'Server error', error: error.message });
+    }
+});
